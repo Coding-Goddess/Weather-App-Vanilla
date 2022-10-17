@@ -12,14 +12,12 @@ body {
 }
 
 h1 {
-  display: inline-block;
   color: blueviolet;
   margin: 0 0 30px;
   padding: 15px 20px 0 0;
 }
 
 .search-form {
-  display: inline-block;
   color: blue;
 }
 ul {
@@ -35,17 +33,18 @@ li {
   list-style: none;
   text-transform: capitalize;
 }
-.temperature {
+.weather-temperature strong {
   font-size: 64px;
   font-weight: 400px;
-  color: purple;
+  color: black;
+  line-height: 1;
 }
-.units {
-  position: relative;
-  top: -34px;
-}
-.additional-info {
-  color: purple;
 
-  padding: 15px;
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
 }

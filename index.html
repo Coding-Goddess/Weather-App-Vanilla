@@ -8,15 +8,13 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="src/style.css" />
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+<script src="https://unpkg.com/axios@1.0.0/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="weather-app-wrapper"
+        <div class="weather-app-wrapper">
         <div class="weather-app">
-        <h1 id ="city"></h1>
-        <form class="search-form" id="search-form">
+        <form id="search-form" class="mb-1" >
             <div class="row">
             <div class="col-8">
          <input 
@@ -25,48 +23,54 @@
          autofocus="on"
          autocomplete="off"
          id="city-input"
-         class="form-control" shadow-sm"
+         class="form-control"
         />
         </div>
-                <div class="col-4">
+               <div class="col-4">
                 <input 
                 type="submit"
-                value="search"
-                class="form-control btn btn-primary shadow-sm"
+                value="Search"
+                class="btn btn-primary width=100"
                 />
-                 </form>
                  </div>
                  </div>
-    
+
+</form>
+<h1 id="city"></h1>
+  <ul>
+            <li id="date">Last updated: </li>
+            <li id="condition">:</li>
+             </ul>
              <div class="row">
             <div class="col-6">
-            <div class="clearfix"
-            <img
-            src=""
-            alt="icon"
-            class="weather-icon float-left"
+            <div class="clearfix weather-temperature">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="" 
+            id="icon"
+            class="float-left"
             />
                 <div class="float-left">
-                <strong class="temperature" id="temperature"> </strong>
-                <span class="units">
-                    <a href="#" id="celsius-link"> ° C  </a>  |
+                <strong id="temperature"> </strong>
+                <span class="units"
+                    ><a href="#" id="celsius-link" class="active"> ° C  </a>  |
                     <a href="#" id="fahrenheit-link"> ° F </a>
                 </span>
+                </div>
             
         </div>
-         <ul>
-            <li id="date"> </li>
-            <li id="condition"></li>
-             </ul>
             </div>
             </div>
             <div class="col-6">
-                <span class="additional-info" id="additional-info"> 
                 <ul>
                     <li> Humidity: <span id="humidity"></span></li>
                     <li> Wind: <span id="wind"></span>km/h</li>
                 </ul>
-                </span>
+                </div>
+                <small>
+                    Open-Source Code Lilly 
+                </small>
+                </div>
+                </div>
 
         <script src="src/app.js"></script>
 </body>
